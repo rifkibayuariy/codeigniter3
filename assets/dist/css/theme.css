@@ -1,0 +1,51 @@
+:root {
+    --theme-color: #FFD75F;
+    --theme-sidebar: 5.25rem;
+    --theme-color-bg: #F5F6FB;
+}
+
+body {
+    background-color: var(--theme-color-bg);
+    margin-left: var(--theme-sidebar);
+    transition: margin 0.5s;
+}
+
+body:not(.collapsed) {
+    --theme-sidebar: 300px;
+}
+
+body > aside#sidebar {
+    width: var(--theme-sidebar);
+    transition: width 0.5s;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+}
+
+body > aside#sidebar > #expand {
+    right: -25px;
+    font-size: 20px;
+}
+
+body.collapsed > aside#sidebar .title {
+    display: none;
+}
+
+body > aside#sidebar > ul#menu-list {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body > aside#sidebar > ul#menu-list > li.menu:hover > a {
+    background-color: var(--theme-color-bg);
+}
+
+body > aside#sidebar > ul#menu-list > li.menu.active > a {
+    background-color: var(--theme-color);
+}
+
+.bg-theme {
+    background-color: var(--theme-color);
+}
+
+.color-theme {
+    color: var(--theme-color);
+}
